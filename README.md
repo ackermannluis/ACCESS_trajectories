@@ -19,10 +19,16 @@ Header:
 Each line after the header will be used to start a new trajectory. The data from all these trajectories will be saved to the node, and once all are calculated, they will be zipped and the zip file will be stored as per line 21 (path_output) of the main script.
 
 -start_time_YYYYmmDDHHMM_str: start time of the trajectory in UTC
+
 -hours_int: integer number of hours to calculate, if the particle exits the domain before this time, the trajectory will end. If negative, the trajectory will be backwards in time. 
+
 -start_point_lat: latitude in degrees where the trajectory will be started, negative is south of the equator.
+
 -start_point_lon: longitude in degrees where the trajectory will be started, between 0 and 360.
+
 -start_point_height_m_ASL: altitude in meters above sea level where the trajectory will be started
+
 -output_time_average_sec: if not None, then the trajectory will be averaged timewise to discrete intervals separated by these number of seconds.
+
 -array_instead_of_dict: if True, then the data will be saved as a numpy array instead of a dictionary, with the first column as time in seconds since the epoch UTC, second column as latitude, third column as longitude, and last column as altitude (m). If false, it will be saved as a numpy dictionary (can be uploaded using load_dictionary(filename_) from U_Analysis_main).
 
